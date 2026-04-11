@@ -1,3 +1,5 @@
+#Implementation of Banker's Algorithm
+#Used to check safe state and avoid deadlock
 import numpy as np
 
 def is_safe_state(available, allocation, need):
@@ -20,10 +22,10 @@ def is_safe_state(available, allocation, need):
 
 def request_resources(state, process_id, request):
     request = np.array(request, dtype=int)
-
+    #check if request is within process need
     if np.any(request > state.need[process_id]):
         return False, "Error: request exceeds process maximum need."
-
+    # check if resources are available
     if np.any(request > state.available):
         return False, "Resources not available right now."
 
