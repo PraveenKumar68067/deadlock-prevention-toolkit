@@ -1,3 +1,5 @@
+# Deadlock detection using Resource Allocation Graph (RAG)
+# A cycle in the graph indicates deadlock among processes
 import networkx as nx
 
 def detect_deadlock(state):
