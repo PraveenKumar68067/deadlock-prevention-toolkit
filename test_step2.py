@@ -1,3 +1,5 @@
+# Test case for verifying Banker's Algorithm safe state checking and request handling
+
 import numpy as np
 from core.models import SystemState
 from core.bankers import is_safe_state, request_resources
