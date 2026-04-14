@@ -1,3 +1,4 @@
+#Deadlock recovery by terminating one blocked process
 def recover_by_termination(state, deadlocked_processes):
     if not deadlocked_processes:
         return "No deadlock to recover from."
