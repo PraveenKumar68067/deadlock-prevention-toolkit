@@ -59,11 +59,30 @@ def partial_deadlock_scenario():
     ])
     return state
 
+def complex_deadlock_scenario():
+    state = SystemState(
+        available=np.array([0, 1]),
+        max_matrix=np.array([
+            [2, 1],
+            [1, 2]
+        ]),
+        allocation=np.array([
+            [1, 0],
+            [0, 1]
+        ])
+    )
+    state.request_matrix = np.array([
+        [0, 1],
+        [1, 0]
+    ])
+    return state
+
 
 def get_all_scenarios():
     return {
         "Safe Scenario": safe_scenario,
         "Deadlock Scenario": deadlock_scenario,
         "Partial Deadlock Scenario": partial_deadlock_scenario
+        "Complex Deadlock Scenario": complex_deadlock_scenario
     }
 
