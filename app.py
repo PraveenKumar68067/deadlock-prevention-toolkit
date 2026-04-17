@@ -47,6 +47,7 @@ controller = st.session_state.controller
 state = controller.state
 
 st.title("Deadlock Prevention and Recovery Toolkit")
+st.caption("This dashboard demonstrates deadlock prevention, detection, recovery, and graph-based visualization in real time.")
 
 col1, col2 = st.columns([1, 2])
 
@@ -244,7 +245,7 @@ if deadlock:
 elif safe:
     st.success(f"Current status: SAFE | Sequence: {seq}")
 else:
-    st.warning("Current status: UNSAFE but not deadlocked")
+    st.warning("Current status: UNSAFE (no safe sequence), but no deadlock detected")
 
 st.markdown("""
 **Legend**
