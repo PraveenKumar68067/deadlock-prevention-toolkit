@@ -1,3 +1,4 @@
+#draw directed edges with clear arowheads for allocation,request, and cycle visualization
 import networkx as nx
 import matplotlib.pyplot as plt
 from pyvis.network import Network
@@ -234,7 +235,7 @@ def draw_rag(
         ax=ax
     )
 
-    ax.set_title("Resource Allocation Graph", fontsize=14, fontweight="bold")
+    ax.set_title("Resource Allocation Graph with deadlock visualization", fontsize=14, fontweight="bold")
     ax.axis("off")
     return fig
 
