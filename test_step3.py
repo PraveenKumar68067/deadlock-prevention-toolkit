@@ -1,3 +1,4 @@
+# Test case for verifying deadlock detection in no-deadlock, full-deadlock, and partial-deadlock scenarios
 import numpy as np
 from core.models import SystemState
 from core.detection import detect_deadlock
